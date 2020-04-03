@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Считаем ворон</title>
+</head>
+<body>
+    <h1>Считаем ворон</h1>
+    <script>
+        let n = 272363;
+
+        document.write('На ветке сидит ' + n + ' ' + getVoron(n));
+
+        function getVoron(n){
+            if (n > 100) n = n%100;
+            if (n > 20) n = n%10;
+            switch(n){
+                case 1:
+                    return 'ворона';
+                case 2:
+                case 3:
+                case 4:
+                    return 'вороны';
+                default:
+                    return 'ворон';
+            }
+        }
+
+    </script>
+</body>
+</html>

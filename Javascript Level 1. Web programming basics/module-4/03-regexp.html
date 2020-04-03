@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регулярные выражения</title>
+</head>
+<body>
+    <h1>Регулярные выражения</h1>
+    <h2>Синтаксис</h2>
+    <pre>
+        . -- Любой символ
+        ^ -- Начало строки
+        $ -- Конец строки
+
+        Модификаторы
+        ? -- ноль или один
+        + -- один или много
+        * -- ноль или много 
+        {n}
+        {3,7}
+
+        (мама)+
+
+        9{2,5}
+
+        .*
+
+        [abcdef] -- любой из перечисленных символов
+        [0-9a-fA-F]
+        #[0-9a-fA-F]{6} -- Код цвета
+
+        [^0-9] -- не цифра
+        [\s] -- space
+        [\d] -- digit
+        [\w] -- word
+
+        [\S] -- НЕ space
+        [\D] -- НЕ digit
+        [\W] -- НЕ word
+
+    </pre>
+
+    <script>
+        var re1 = new RegExp('abc?');
+        if (re1.test('abcz')) document.write("Соотвестует" + "<br>");
+        
+        if (new RegExp('abc?').test('abcz')) document.write("Соотвестует" + "<br>");
+
+        if (/abc?/.test('abcz')) document.write("Соотвестует" + "<br>");
+
+        if ('abcz'.match(/abc?/)) document.write("Соотвестует" + "<br>");
+
+    </script>
+</body>
+</html>

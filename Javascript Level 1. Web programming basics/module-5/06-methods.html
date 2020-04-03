@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наследование классов</title>
+</head>
+<body>
+    <h1>Наследование классов</h1>
+    <script>
+        class Person{
+            constructor(name='', age=0){
+                this._name = name;
+                this._age = age;
+            }
+
+            getName(){
+                return this._name;
+            }
+            setName(value){
+                this._name = value;
+                return this;
+            }
+
+            getAge(){
+                return this._age;
+            }
+            setAge(value){
+                this._age = value;
+                return this;
+            }
+
+            showHellow(){
+                document.write('<p>Привет, ' + this.getName() +'</p>');
+                return this;
+            }         
+        }
+
+
+        let obj1 = new Person();
+        obj1.setName('Вася').setAge(25).showHellow();
+
+
+        obj1
+            .setName('Петя')
+            .setAge(30)
+            .showHellow();
+
+    </script>
+</body>
+</html>

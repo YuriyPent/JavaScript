@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Классы ES6</title>
+</head>
+<body>
+    <h1>Классы ES6</h1>
+    <script>
+        class User{
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            showHellow(){
+                document.write('<p>Привет, ' + this.name +'</p>');
+            }   
+        }
+
+        const obj1 = new User('Вася', 25);
+        obj1.showHellow();
+
+    </script>
+</body>
+</html>

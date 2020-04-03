@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Передача параметров по ссылке и по значению</title>
+</head>
+<body>
+    <h1>Передача параметров по ссылке и по значению</h1>
+    <script>
+        'use strict';
+
+        function sayHello(hello, name){
+            hello += ', пользователь';
+            document.write(`<h2>${hello} ${name}</h2>`);
+        }
+
+        var helloString = 'Привет';
+        var userName = 'Вася';
+
+        sayHello(helloString, userName);
+        document.write(`Переменная helloString ${helloString}`);
+
+        var greetingObject = {
+            hello: 'Привет',
+            name: 'Петя'
+        }
+
+        function sayHello2(greeting){
+            greeting.hello += ', пользователь';
+            document.write(`<h2>${greeting.hello} ${greeting.name}</h2>`);
+        }
+
+        sayHello2(greetingObject);
+
+        document.write(`Переменная greetingObject.hello ${greetingObject.hello}`);
+
+    </script>
+</body>
+</html>

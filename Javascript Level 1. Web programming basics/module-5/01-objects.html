@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Объекты</title>
+</head>
+<body>
+    <h1>Объекты</h1>
+    <script>
+        var obj1 = new Object();
+        obj1.name = 'Вася';
+        obj1['age'] = 30;
+        obj1.showHello = function(){
+            document.write('<p>Привет, ' + this.name +'</p>');
+        }
+        obj1.showHello();
+
+        // Копирование объектов
+        var obj2 = Object.assign(new Object(), obj1);
+        obj2.name = 'Федя';
+        obj2.showHello();
+
+        var obj3 = {
+            name: 'Маша',
+            age: 25,
+            showHello: function(){
+                document.write('<p>Привет, ' + this.name +'</p>');
+            }
+        }
+        obj3.showHello();
+        
+    </script>
+</body>
+</html>

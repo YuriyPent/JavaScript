@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наследование классов</title>
+</head>
+<body>
+    <h1>Наследование классов</h1>
+    <script>
+        class Person{
+            constructor(){
+                this.name = "Персона";
+                this.age = 0;
+            }
+            showHellow(){
+                document.write('<p>Привет, ' + this.name +'</p>');
+            }            
+        }
+
+        class Student extends Person{
+            constructor(){
+                super();
+                this.group = 'Группа';
+            }
+        }
+
+        let obj1 = new Student();
+        obj.name = 'Вася';
+        obj.group = 'ООП-1';
+        obj1.showHellow();
+
+    </script>
+</body>
+</html>

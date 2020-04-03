@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гистограмма</title>
+    <style>
+        #gist div{
+            float:left;
+            margin: 2px;
+            width: 50px;
+            background-color: #99f;
+        }
+    </style>
+</head>
+<body>
+    <h1>Гистограмма</h1>
+    <div id="gist">
+        <script>
+            var i = 0;
+            while(i<=10){
+                i++;
+                let height = i*10;
+                document.write(`<div style="height:${height}px">&nbsp;</div>`);
+
+            }
+
+
+
+        </script>
+    </div>
+</body>
+</html>

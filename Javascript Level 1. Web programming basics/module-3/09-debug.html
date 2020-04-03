@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отладка</title>
+</head>
+<body>
+    <h1>Отладка</h1>
+    <script>
+        'use strict';
+
+        var a = 1;
+
+        function f1(){
+
+            for (var i=0; i<5; i++){
+                a = a * i;
+                document.write(a + ' ');
+            }
+
+        }
+
+        f1();
+
+    </script>
+</body>
+</html>

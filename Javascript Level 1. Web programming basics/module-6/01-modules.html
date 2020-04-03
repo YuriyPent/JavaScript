@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модули</title>
+</head>
+<body>
+    <h1>Модули</h1>
+
+    <script type="module">
+        import {user} from './01-module.js';
+        import {test} from './01-module.js';
+
+        import * as module2 from './02-module.js';
+
+        alert(module2.a);
+        
+    </script>
+</body>
+</html>

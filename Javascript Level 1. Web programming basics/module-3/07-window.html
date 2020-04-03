@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Объект window</title>
+</head>
+<body>
+    <h1>Объект window</h1>
+    <script>
+        'use strict';
+
+        var _a = 123;
+        var $ = 'моя переменная';
+        var МегаПеременная = '💋💋';
+
+        function myFunc() {}
+
+        function getFunc(){
+            return function(){
+                return 'Hello';
+            }
+        }
+
+        var b = getFunc();
+        b();
+
+        for (var key in window){
+            document.write('<p>' + key + ': ' + window[key] + '</p>');
+        }
+
+        (function(w){
+            document.write('<p>Глобальная переменная b это' + w.b + '</p>');
+        })(window);
+
+
+        setTimeout(function(){ alert('Привет') }, 1500);
+
+    </script>
+</body>
+</html>

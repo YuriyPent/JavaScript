@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Объектный тип: Объект (Object)</title>
+</head>
+<body>
+    <h1>Объектный тип: Объект (Object)</h1>
+    <script>
+        var obj1 = new Object;
+        var obj2 = {}
+
+        obj1.name = 'Вася';
+        obj2.name = 'Петя';
+
+        obj1.sayHello = function(){ document.write('Привет ' + this.name ) }
+
+        obj1.sayHello();
+    </script>
+</body> 
+</html>

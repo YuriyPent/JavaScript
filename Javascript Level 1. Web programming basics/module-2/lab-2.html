@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шахматное поле</title>
+    <style>
+        #chess, #chess td { border: 1px solid black; border-collapse: collapse }
+        #chess td { width: 50px; height: 50px;}
+        .black { background-color: black; }
+        .white { background-color: white; }
+    </style>
+</head>
+<body>
+    <h1>Шахматное поле</h1>
+    <table id="chess">
+        <script>
+            const N = 8;
+            var color = 'black';
+            
+            // Цикл рядов
+            for (var row=1; row <= N; row++){
+                document.write('<tr>');
+                let rowColor = color;
+
+                // Цикл по колонкам
+                for (var col=1; col<=N; col++){
+                    document.write(`<td class="${color}">&nbsp;</td>`);
+                    color = (color == 'black') ? 'white' : 'black';
+                }
+
+                color = (rowColor == 'black') ? 'white' : 'black';
+                document.write('</tr>');
+            }
+        </script>
+    </table>
+</body>
+</html>

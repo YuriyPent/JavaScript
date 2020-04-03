@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Массивы Array</title>
+</head>
+<body>
+    <h1>Массивы Array</h1>
+    <script>
+        var a = new Array(1, 5, 'Привет', new Array('Еще', 'раз'));
+        console.log(a[2]);
+        console.log(a[3][1]);
+
+        delete a[0];
+        console.log(a);
+
+        // JSON нотация
+        var b = [];
+        var b = ["Строка", 123, ["Еще один", "Массив"]];
+
+        // Пример правильной инициализации dataLayer
+        var dataLayer = dataLayer || [];
+    </script>
+</body>
+</html>

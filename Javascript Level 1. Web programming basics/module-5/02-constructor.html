@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конструкторы</title>
+</head>
+<body>
+    <h1>Конструкторы</h1>
+    <script>
+        function User(){
+            this.name = 'Вася';
+            this.age = 20;
+            this.showHello = function(){
+                document.write('<p>Привет, ' + this.name +'</p>');
+            }
+        }
+
+        var obj1 = new User();
+        obj1.showHello();
+
+    </script>
+</body>
+</html>

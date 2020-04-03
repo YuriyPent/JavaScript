@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свойства классов</title>
+</head>
+<body>
+    <h1>Свойства классов</h1>
+    <script>
+        class Person{
+            constructor(name='', age=0){
+                this._name = name;
+                this._age = age;
+            }
+
+            get name(){
+                return this._name;
+            }
+            set name(value){
+                this._name = value;
+            }
+
+            get age(){
+                return this._age;
+            }
+            set age(value){
+                this._age = value;
+            }
+
+            get greeting(){
+                return 'Привет, ' + this.name;
+            }
+
+            showHellow(){
+                document.write('<p>' + this.greeting +'</p>');
+                return this;
+            }         
+        }
+
+        let obj1 = new Person();
+        obj1.name = 'Вася';
+        obj1.showHellow();
+
+    </script>
+</body>
+</html>

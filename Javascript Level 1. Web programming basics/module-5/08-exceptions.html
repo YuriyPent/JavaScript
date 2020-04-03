@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Исключения</title>
+</head>
+<body>
+    <h1>Исключения</h1>
+    <script>
+        class Person{
+            constructor(name='', age=0){
+                this._name = name;
+                this._age = age;
+            }
+
+            get name(){
+                return this._name;
+            }
+            set name(value){
+                this._name = value;
+            }
+
+            get age(){
+                return this._age;
+            }
+            set age(value){
+                this._age = value;
+            }
+
+            get greeting(){
+                return 'Привет, ' + this.name;
+            }
+            set greeting(value){
+                throw new Error('Нельзя записывать в свойсво Person.greeting'); 
+            }
+
+            showHellow(){
+                document.write('<p>' + this.greeting +'</p>');
+                return this;
+            }         
+        }
+
+        try{
+            let obj1 = new Person();
+            obj1.name = 'Вася';
+            obj1.greeting = 'Что-то записываем';
+            obj1.showHellow();
+        }
+        catch (error){
+            alert(error.message);
+        }
+        finally {
+            // Финализирующие действия, выполняются в любом случае
+        }
+
+       
+    </script>
+</body>
+</html>
